@@ -98,9 +98,9 @@
 // MDB Mixins
 @function set-notification-text-color($color) {
   @if (lightness($color) > 70) {
-    @return $black; Lighter backgorund, return dark color
+    @return $black; // Lighter backgorund, return dark color
   } @else {
-    @return $white; Darker background, return light color
+    @return $white; // Darker background, return light color
   }
 }
 
