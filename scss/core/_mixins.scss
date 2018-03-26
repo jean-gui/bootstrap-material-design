@@ -96,13 +96,13 @@
 }
 
 // MDB Mixins
-// @function set-notification-text-color($color) {
-//   @if (lightness($color) > 80) {
-//     @return $black; Lighter backgorund, return dark color
-//   } @else {
-//     @return $white; Darker background, return light color
-//   }
-// }
+@function set-notification-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $black; Lighter backgorund, return dark color
+  } @else {
+    @return $white; Darker background, return light color
+  }
+}
 
 // Make button
 @mixin make-button ($name, $color) {
@@ -212,13 +212,6 @@
 // Make badge
 @mixin make-badge($name, $color) {
   .badge-#{$name} {
-    @function set-notification-text-color($color) {
-      @if (lightness($color) > 70) {
-        @return $black; // Lighter backgorund, return dark color
-      } @else {
-        @return $white; // Darker background, return light color
-      }
-    }
     background-color: $color !important;
     color: set-notification-text-color($color) !important;
   }
